@@ -27,7 +27,8 @@ function KorisnikDetails(){
             <React.Fragment>
             
         
-        <div style = {{ width:'fit-content', display:'flex', flexDirection:'column', alignItems:'flex-start', border:'1px solid black'}}>
+        
+         <div style = {{ width:'fit-content', display:'flex', flexDirection:'column', alignItems:'flex-start', border:'1px solid black'}}>
         
             {detail.picture && <img src={detail.picture} alt="picture"  height = ""/>}
             <div className = "underlined-divs"><span>ID: </span>{korisnik.id}</div>
@@ -46,7 +47,7 @@ function KorisnikDetails(){
             <div className = "underlined-divs"><span>Updated Date: </span>{detail.updatedDate}</div>
 
             <div> <Link to = "/"><button style = {{width:"100%", marginTop:'2rem'}}>Get Back</button></Link></div>
-        </div>
+        </div> 
         
         </React.Fragment>
         )
