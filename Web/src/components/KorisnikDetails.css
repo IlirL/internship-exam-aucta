@@ -1,0 +1,7 @@
+div span{
+    font-weight: bold;
+}
+
+.underlined-divs{
+    border-bottom: 1px solid black;
+}
