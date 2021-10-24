@@ -7,7 +7,7 @@ function KorisnikRow({row, korisnik}){
              <th scope = "row">{row}</th>
            <td>{korisnik.firstName}</td>
            <td>{korisnik.lastName}</td>
-           <td>{korisnik.title == "mr" ? "Male" : "Female"}</td>
+           <td>{korisnik.title == "mr" ? "Male" :korisnik.title == 'mrs' || korisnik.title =='ms' || korisnik.title =='miss'?"Female" : ""}</td>
            <td style = {{display:'flex', justifyContent:'center', alignItems:'center'}}>
                <Link to = {{
                    pathname:'/details',

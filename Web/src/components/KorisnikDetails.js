@@ -21,33 +21,36 @@ function KorisnikDetails(){
                 setDetail(res.data)
             })
         }, [])
+   
 
-            return(       
-                <React.Fragment>
-                <React.Suspense fallback = { <ClipLoader  loading={true}  size={150} />}>
-            <div style = {{ width:'fit-content', display:'flex', flexDirection:'column', alignItems:'flex-start', border:'1px solid black'}}>
+        return(       
+            <React.Fragment>
             
-                <img src={detail.picture} alt="picture"  height = ""/>
-                <div className = "underlined-divs"><span>ID: </span>{korisnik.id}</div>
-                <div className = "underlined-divs"><span>First name: </span>{detail.firstName}</div>
-                <div className = "underlined-divs"><span>Last Name: </span>{detail.lastName}</div>
-                <div className = "underlined-divs"><span>Gender: </span>{detail.gender}</div>
-                <div className = "underlined-divs"><span>Email: </span>{detail.email}</div>
-                <div className = "underlined-divs"><span>Phone: </span>{detail.phone}</div>
-                {
-                    detail.location ? 
-                    <div className = "underlined-divs"><span>Location: </span>{detail.location.street} {detail.location.city} {detail.location.state} {detail.location.country}</div>                                    :
-                                    ""
-                    }
-                
-                <div className = "underlined-divs"><span>Registered Date: </span>{detail.registerDate}</div>
-                <div className = "underlined-divs"><span>Updated Date: </span>{detail.updatedDate}</div>
+        
+        <div style = {{ width:'fit-content', display:'flex', flexDirection:'column', alignItems:'flex-start', border:'1px solid black'}}>
+        
+            {detail.picture && <img src={detail.picture} alt="picture"  height = ""/>}
+            <div className = "underlined-divs"><span>ID: </span>{korisnik.id}</div>
+            <div className = "underlined-divs"><span>First name: </span>{detail.firstName}</div>
+            <div className = "underlined-divs"><span>Last Name: </span>{detail.lastName}</div>
+            {detail.gender && <div className = "underlined-divs"><span>Gender: </span>{detail.gender}</div>}
+            <div className = "underlined-divs"><span>Email: </span>{detail.email}</div>
+            {detail.phone && <div className = "underlined-divs"><span>Phone: </span>{detail.phone}</div>}
+            {
+                detail.location ? 
+                <div className = "underlined-divs"><span>Location: </span>{detail.location.street} {detail.location.city} {detail.location.state} {detail.location.country}</div>                                    :
+                                ""
+                }
+            
+            <div className = "underlined-divs"><span>Registered Date: </span>{detail.registerDate}</div>
+            <div className = "underlined-divs"><span>Updated Date: </span>{detail.updatedDate}</div>
 
-                <div> <Link to = "/"><button style = {{width:"100%", marginTop:'2rem'}}>Get Back</button></Link></div>
-            </div>
-            </React.Suspense>
-            </React.Fragment>
-            )
+            <div> <Link to = "/"><button style = {{width:"100%", marginTop:'2rem'}}>Get Back</button></Link></div>
+        </div>
+        
+        </React.Fragment>
+        )
+        
            
             
             
