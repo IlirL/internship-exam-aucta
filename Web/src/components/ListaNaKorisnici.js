@@ -14,7 +14,7 @@ function ListaNaKorisnici({korisnici}){
         <React.Suspense fallback = { <ClipLoader  loading={true}  size={150} />}>
         <div style = {{height:"90%", width:"100%"}}>
            <div style = {{display:'flex', justifyContent:"end"}}> <Link to = "/newkorisnik"><button style = {{backgroundColor:"green", color:'white', height:'3rem'}}>+Korisnik</button></Link></div>
-            <table className = "table">
+            <table className = "table table-striped table-bordered table-hover">
                 <thead style = {{position:'sticky', top:'0px', backgroundColor:'white', zIndex:'100'}}>
                     <tr>
                         <th scope = "col">Nr.</th>
