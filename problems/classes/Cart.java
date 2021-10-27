@@ -1,4 +1,4 @@
-package Problems.classes;
+package problems.classes;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,8 +9,8 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Cart{
-	ArrayList<Product> products;
-	static double ddv = 0.18;
+	 private ArrayList<Product> products;
+	private static double ddv = 0.18;
 	public Cart(){
 		this.products = new ArrayList<Product>();
 	}
@@ -27,7 +27,7 @@ public class Cart{
 		
 		for(Product p : products) {
 			if(p.getKategorija() .equals(category)) {
-				names.add(p.ime);
+				names.add(p.getIme());
 			}
 		}
 		

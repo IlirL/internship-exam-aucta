@@ -1,10 +1,10 @@
-package Problems;
+package problems;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Problems.classes.Cart;
-import Problems.classes.Product;
+import problems.classes.Cart;
+import problems.classes.Product;
 
 public class Problem2 {
 		

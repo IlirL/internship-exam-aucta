@@ -1,9 +1,9 @@
-package Problems.classes;
+package problems.classes;
 
 public class Product implements Comparable<Product>{
-	String ime;
-	String kategorija;
-	float price;
+	private String ime;
+	private String kategorija;
+	private float price;
 	
 	public Product(String ime, String kategorija, float price){
 		this.ime = ime;
